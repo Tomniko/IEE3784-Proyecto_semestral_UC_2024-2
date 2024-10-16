@@ -189,12 +189,22 @@ def plot_height_images_principal(height_image_mm, pixel_spacing):
     # Crear ejes físicos
     extent = [
         0, width * pixel_spacing[1],  # X-axis
-        0, height * pixel_spacing[0]  # Y-axis
+        0, height * pixel_spacing[0] # Y-axis
     ]
     
     plt.figure(figsize=(8, 6))
-    im = plt.imshow(height_image_mm, cmap='Grays', extent=extent, origin='lower', aspect='auto')
-    plt.colorbar(im, label='Altura (mm)')
+    im = plt.imshow(height_image_mm, cmap='gray', extent=extent, origin='lower', aspect='auto')
+    
+    # Añadir colorbar y ajustar los ticks para dividir los valores por 10
+    cbar = plt.colorbar(im, label='Altura (mm)')
+    
+    # Obtener los ticks actuales de la colorbar
+    ticks = cbar.get_ticks()
+    
+    # Modificar los ticks para dividir por 10
+    cbar.set_ticks(ticks)
+    cbar.set_ticklabels(ticks / 10)
+    
     plt.title("Altura en Dirección Principal")
     plt.xlabel("Distancia Principal (mm)")
     plt.ylabel("Distancia Secundaria (mm)")
@@ -226,16 +236,28 @@ def plot_height_images_lr_ap(grid_x, grid_y, grid_z, pixel_spacing):
 
     # Superficie Izquierda-Derecha (X vs Z), mostrando la variación en Y
     plt.subplot(1, 2, 1)
-    plt.contourf(grid_x_mm, grid_z_mm, grid_y_mm, cmap='gray')
-    plt.colorbar(label='Distancia Anteroposterior (Y) (mm)')
+    cont1 = plt.contourf(grid_x_mm, grid_z_mm, grid_y_mm, cmap='gray')
+    cbar1 = plt.colorbar(cont1, label='Distancia Anteroposterior (Y) (mm)')
+    
+    # Ajustar los valores de la colorbar para dividir por 10
+    ticks = cbar1.get_ticks()
+    cbar1.set_ticks(ticks)
+    cbar1.set_ticklabels(ticks / 10)  # Dividir los valores por 10
+    
     plt.title("Superficie Izquierda-Derecha (X vs Z)")
     plt.xlabel("Distancia Izquierda-Derecha (mm)")
     plt.ylabel("Altura (Z) (mm)")
 
     # Superficie Anteroposterior (X vs Y), mostrando la variación en Z
     plt.subplot(1, 2, 2)
-    plt.contourf(grid_x_mm, grid_y_mm, grid_z_mm, cmap='gray')
-    plt.colorbar(label='Altura (Z) (mm)')
+    cont2 = plt.contourf(grid_x_mm, grid_y_mm, grid_z_mm, cmap='gray')
+    cbar2 = plt.colorbar(cont2, label='Altura (Z) (mm)')
+    
+    # Ajustar los valores de la colorbar para dividir por 10
+    ticks2 = cbar2.get_ticks()
+    cbar2.set_ticks(ticks2)
+    cbar2.set_ticklabels(ticks2 / 10)  # Dividir los valores por 10
+    
     plt.title("Superficie Anteroposterior (X vs Y)")
     plt.xlabel("Distancia Izquierda-Derecha (mm)")
     plt.ylabel("Distancia Anteroposterior (Y) (mm)")
