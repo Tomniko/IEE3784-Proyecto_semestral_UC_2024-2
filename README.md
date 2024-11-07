@@ -14,7 +14,7 @@ pip install sklearn
 ```
 
 ## Descripción de las Funciones Principales
-___ load_dicom_files(folder): Carga archivos DICOM desde la carpeta especificada. Filtra y añade solo los archivos válidos en una lista de diccionarios.
+*** load_dicom_files(folder): Carga archivos DICOM desde la carpeta especificada. Filtra y añade solo los archivos válidos en una lista de diccionarios.
 
 sort_slices(dicom_files): Ordena los cortes según la posición de la imagen en el paciente, garantizando la coherencia en el orden de los cortes.
 
