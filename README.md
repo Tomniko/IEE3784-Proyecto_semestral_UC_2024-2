@@ -4,14 +4,15 @@ Este código permite cargar, procesar, y analizar imágenes de cortes tomográfi
 ## Requisitos
 Para ejecutar este código, se deben instalar las siguientes librerías:
 
-## pydicom: Para leer archivos DICOM.
+pydicom: Para leer archivos DICOM.
 numpy: Para manipulación de matrices.
 scipy: Para procesamiento de imágenes y operaciones matemáticas.
 scikit-image: Para segmentación y filtrado de imágenes.
 matplotlib: Para visualización.
 cv2 (OpenCV): Para procesamiento de imágenes.
 sklearn: Para análisis de componentes principales (PCA).
-Descripción de las Funciones Principales
+
+## Descripción de las Funciones Principales
 load_dicom_files(folder): Carga archivos DICOM desde la carpeta especificada. Filtra y añade solo los archivos válidos en una lista de diccionarios.
 
 sort_slices(dicom_files): Ordena los cortes según la posición de la imagen en el paciente, garantizando la coherencia en el orden de los cortes.
