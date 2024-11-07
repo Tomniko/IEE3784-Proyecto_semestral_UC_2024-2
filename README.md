@@ -3,14 +3,15 @@ Este código permite cargar, procesar, y analizar imágenes de cortes tomográfi
 
 ## Requisitos
 Para ejecutar este código, se deben instalar las siguientes librerías:
-
-pydicom: Para leer archivos DICOM.
-numpy: Para manipulación de matrices.
-scipy: Para procesamiento de imágenes y operaciones matemáticas.
-scikit-image: Para segmentación y filtrado de imágenes.
-matplotlib: Para visualización.
-cv2 (OpenCV): Para procesamiento de imágenes.
-sklearn: Para análisis de componentes principales (PCA).
+'''bash 
+pip install pydicom
+pip install numpy
+pip install scipy
+pip install scikit-image
+pip install matplotlib
+pip install opencv-python
+pip install sklearn
+'''
 
 ## Descripción de las Funciones Principales
 load_dicom_files(folder): Carga archivos DICOM desde la carpeta especificada. Filtra y añade solo los archivos válidos en una lista de diccionarios.
@@ -45,6 +46,6 @@ Para ejecutar el código, siga los pasos:
 5. Controles Interactivos
 - Slider: Permite navegar por los cortes coronales.
 - Teclas:
-<kbd>r</kbd>: Realiza segmentación automática en el corte actual.
-b: Aplica segmentación de Mumford-Shah al corte segmentado.
-y: Realiza los gráficos de mediciones de alturas de pies a cabeza y con PCA
+  - <kbd>r</kbd>: Realiza segmentación automática en el corte actual.
+  - <kbd>b</kbd>: Aplica segmentación de Mumford-Shah al corte segmentado.
+  - <kbd>y</kbd>: Realiza los gráficos de mediciones de alturas de pies a cabeza y con PCA
