@@ -3,7 +3,7 @@ Este código permite cargar, procesar, y analizar imágenes de cortes tomográfi
 
 ## Requisitos
 Para ejecutar este código, se deben instalar las siguientes librerías:
-'''bash 
+```bash 
 pip install pydicom
 pip install numpy
 pip install scipy
@@ -11,7 +11,7 @@ pip install scikit-image
 pip install matplotlib
 pip install opencv-python
 pip install sklearn
-'''
+```
 
 ## Descripción de las Funciones Principales
 load_dicom_files(folder): Carga archivos DICOM desde la carpeta especificada. Filtra y añade solo los archivos válidos en una lista de diccionarios.
