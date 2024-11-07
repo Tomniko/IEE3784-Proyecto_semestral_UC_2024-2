@@ -40,11 +40,11 @@ Para ejecutar el código, siga los pasos:
 
 1. Cargue los archivos DICOM con load_dicom_files("ruta/carpeta").
 2. Ordene los cortes usando sort_slices(dicom_files).
-Genere la imagen 3D y extraiga posiciones Z con create_3d_image(slices).
-Visualice cortes específicos o aplique segmentación con las funciones de segmentación y análisis de altura.
-Controles Interactivos
-Slider: Permite navegar por los cortes coronales.
-Teclas:
-r: Realiza segmentación automática en el corte actual.
+3. Genere la imagen 3D y extraiga posiciones Z con create_3d_image(slices).
+4. Visualice cortes específicos o aplique segmentación con las funciones de segmentación y análisis de altura.
+5. Controles Interactivos
+- Slider: Permite navegar por los cortes coronales.
+- Teclas:
+<kbd>r</kbd>: Realiza segmentación automática en el corte actual.
 b: Aplica segmentación de Mumford-Shah al corte segmentado.
 y: Realiza los gráficos de mediciones de alturas de pies a cabeza y con PCA
