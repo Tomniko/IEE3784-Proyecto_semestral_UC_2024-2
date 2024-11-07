@@ -18,23 +18,23 @@ pip install sklearn
 
 - sort_slices(dicom_files): Ordena los cortes según la posición de la imagen en el paciente, garantizando la coherencia en el orden de los cortes.
 
-create_3d_image(slices): Genera una imagen tridimensional y un vector de posiciones Z a partir de una lista de cortes DICOM.
+- create_3d_image(slices): Genera una imagen tridimensional y un vector de posiciones Z a partir de una lista de cortes DICOM.
 
-slice_det(image, index, plane): Extrae y devuelve un corte 2D específico (coronal, sagital, o axial) de la imagen tridimensional.
+- slice_det(image, index, plane): Extrae y devuelve un corte 2D específico (coronal, sagital, o axial) de la imagen tridimensional.
 
-mostrar_histograma(imagen, titulo): Muestra un histograma de las intensidades de un corte dado, útil para análisis preliminares de intensidad.
+- mostrar_histograma(imagen, titulo): Muestra un histograma de las intensidades de un corte dado, útil para análisis preliminares de intensidad.
 
-segmentar_slice_automatica(ct_slice, initial_threshold, max_iter, window_size): Realiza la segmentación de huesos en un corte de imagen de CT usando umbralización adaptativa.
+- segmentar_slice_automatica(ct_slice, initial_threshold, max_iter, window_size): Realiza la segmentación de huesos en un corte de imagen de CT usando umbralización adaptativa.
 
-segmentacion_mumford_shah(slice_img, iteraciones, lambda1, lambda2): Segmenta un corte de imagen utilizando una variación del método de Mumford-Shah (aproximado por el método de Chan-Vese).
+- segmentacion_mumford_shah(slice_img, iteraciones, lambda1, lambda2): Segmenta un corte de imagen utilizando una variación del método de Mumford-Shah (aproximado por el método de Chan-Vese).
 
-measure_height_lr(y_coords, pixel_spacing) y measure_height_pca(x_coords, y_coords, pixel_spacing): Calculan la altura de una región segmentada en dos direcciones:
+- measure_height_lr(y_coords, pixel_spacing) y measure_height_pca(x_coords, y_coords, pixel_spacing): Calculan la altura de una región segmentada en dos direcciones:
 
-measure_height_lr: A lo largo del eje pies-cabeza.
-measure_height_pca: En la dirección principal calculada con PCA.
-calculate_and_plot_heights(mark, pixel_spacing): Calcula las alturas de cada segmento vertebral identificado en la dirección pies-cabeza y PCA. Muestra estos valores en un mapa de color.
+- measure_height_lr: A lo largo del eje pies-cabeza.
+- measure_height_pca: En la dirección principal calculada con PCA.
+- calculate_and_plot_heights(mark, pixel_spacing): Calcula las alturas de cada segmento vertebral identificado en la dirección pies-cabeza y PCA. Muestra estos valores en un mapa de color.
 
-show_coronal_slices(img3d, img_shape, z_positions, pixel_spacing): Visualiza cortes coronales con un slider interactivo. Incluye una función para activar la segmentación automática y la segmentación de Mumford-Shah con pulsaciones de teclado (x, r, b).
+- show_coronal_slices(img3d, img_shape, z_positions, pixel_spacing): Visualiza cortes coronales con un slider interactivo. Incluye una función para activar la segmentación automática y la segmentación de Mumford-Shah con pulsaciones de teclado (r, b).
 
 ## Uso
 Para ejecutar el código, siga los pasos:
